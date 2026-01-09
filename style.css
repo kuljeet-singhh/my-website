@@ -7,41 +7,69 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-
 .nav {
-    background: linear-gradient(135deg, #800080, #b84fd6);
+    background: purple;
     padding: 15px 30px;
-    text-align: center;
-}
-
-.logo h2 {
-    color: #fff;
-    font-weight: 600;
-}
-
-.logo span {
-    color: #f1f1f1;
-    font-size: 14px;
-}
-
-.nav-link {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo h2,
+.logo span {
+    color: white;
+}
+
+/* Desktop */
+.nav-link {
     list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
 .nav-link a {
     color: white;
     text-decoration: none;
-    font-weight: 400;
 }
 
-.nav-link a:hover {
-    text-decoration: underline;
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-link {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: purple;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+
+        display: none;   /* HIDDEN */
+    }
+
+    .nav-link.active {
+        display: block; /* SHOW */
+    }
+
+    .nav-link li {
+        margin: 15px 0;
+    }
+}
+
 
 
 .explore-container {

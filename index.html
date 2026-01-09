@@ -12,7 +12,16 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    document.getElementById("hamburger").onclick = function () {
+        document.getElementById("navLink").classList.toggle("active");
+    };
+</script>
+
 <body>
+
+
+    
 
 <nav class="nav">
     <div class="logo">
@@ -20,13 +29,20 @@
         <span>Tour & Travels</span>
     </div>
 
-    <ul class="nav-link">
+    <div class="hamburger" id="hamburger">
+        ☰
+    </div>
+
+    <ul class="nav-link" id="navLink">
         <li><a href="#">Home</a></li>
         <li><a href="#">About Us</a></li>
-        <li><a href="contact-container">Contact Us</a></li>
+        <li><a href="#contact-container">Contact Us</a></li>
         <li><a href="#">Legal & Policy</a></li>
     </ul>
 </nav>
+
+
+
 
 <section class="explore-container">
     <div class="explore-text">
